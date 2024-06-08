@@ -1,0 +1,24 @@
+﻿@model Tasks
+
+<form action="/Tasks/SaveNew" method="post">
+
+    <div class="mb-3">
+        <label for="Title" class="form-label">Name</label>
+        <input type="text" class="form-control" id="Title" name="Title" required>
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label for="Description" class="form-label">Description</label>
+        <input type="text" class="form-control" id="Description" name="Description">
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label for="Deadline" class="form-label">Deadline</label>
+        <input type="datetime-local" class="form-control" id="Deadline" name="Deadline"
+        <span asp-validation-for="Deadline" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+    <div id="scrollBar" class="scrollBar"></div>
+</form>

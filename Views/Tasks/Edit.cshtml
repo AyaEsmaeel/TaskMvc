@@ -1,0 +1,24 @@
+﻿@model Tasks
+
+<h1>Edit Item</h1>
+
+<form method="post" action="/Tasks/SaveEdit">
+    <input type="hidden" name="ClientsId" value="@Model.ClientsId">
+
+    <div class="mb-3">
+        <label for="Name" class="form-label">Name:</label>
+        <input type="text" class="form-control" id="Title" name="Title" required value="@Model.Title">
+    </div>
+    <div class="mb-3">
+        <label for="Name" class="form-label">Description:</label>
+        <input type="text" class="form-control" id="Description" name="Description" value="@Model.Description">
+    </div>
+    <div class="mb-3">
+        <label for="Name" class="form-label">Deadline:</label>
+        <input type="text" class="form-control" id="Deadline" name="Deadline" value="@Model.Deadline">
+    </div>
+    <div class="col-auto">
+        <button type="submit" class="btn btn-primary mb-3">Save Changes</button>
+    </div>
+
+</form>
